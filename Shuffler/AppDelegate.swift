@@ -66,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let outputFrameLength = shuffler.frameLength
                 let frameCount = source.frameCount
                 var data = [[UInt8]].init(repeating: [UInt8].init(repeating: 0, count: outputFrameLength), count: frameCount)
-                var outputLightFile = LightFile(frameCount: frameCount, frameLength: outputFrameLength, musicName: source.musicName, framePeriod: 0.037, lightData: [[])
+                //var outputLightFile = LightFile(frameCount: frameCount, frameLength: outputFrameLength, musicName: source.musicName, framePeriod: 0.037, lightData: [[])
                for shuffle in shuffler.shuffleItems {
                     
                 }
