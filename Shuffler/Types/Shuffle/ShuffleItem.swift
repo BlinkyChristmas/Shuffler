@@ -69,6 +69,7 @@ extension ShuffleItem {
         }
         let lightURL = baseLocation.appending(path: sourceLocation).appending(path: musicName).appendingPathExtension("light")
         do {
+            guard lightURL.exist else { throw GeneralError(errorMessage: "File does not exist: \(lightURL.path())")}
             let frameCount = outputData.count
             let inputData = try LightFile(url: lightURL)
             let inputCount = inputData.frameCount
